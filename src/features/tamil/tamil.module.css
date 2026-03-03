@@ -1,0 +1,47 @@
+.tamilPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.comingSoonCard {
+  text-align: center;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+}
+
+.comingSoonIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.comingSoonTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.comingSoonText {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .comingSoonCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .comingSoonIcon {
+    font-size: 3rem;
+  }
+
+  .comingSoonTitle {
+    font-size: 1.5rem;
+  }
+}
