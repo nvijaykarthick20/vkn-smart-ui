@@ -1,0 +1,156 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f0f1f3 100%);
+}
+
+.header {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.headerTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  background: linear-gradient(135deg, #93c5fd 0%, #e879f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.headerTitle:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.headerTitle:active {
+  transform: translateY(0);
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userInfo {
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.userInfo:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.logoutButton {
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-family: inherit;
+  letter-spacing: 0.3px;
+}
+
+.logoutButton:hover {
+  background: rgba(255, 60, 60, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.logoutButton:active {
+  transform: translateY(0);
+}
+
+.main {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.25rem 1rem;
+  }
+
+  .headerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .headerTitle {
+    font-size: 1.5rem;
+  }
+
+  .headerRight {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .userInfo {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .logoutButton {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .main {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media print {
+  .header {
+    display: none;
+  }
+
+  .userInfo {
+    display: none;
+  }
+
+  .logoutButton {
+    display: none;
+  }
+}

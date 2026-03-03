@@ -1,0 +1,168 @@
+.home {
+  width: 100%;
+}
+
+.heroSection {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.navigationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.navCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.navCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb 0%, #7c3aed 50%, #ec4899 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navCard:hover {
+  border-color: #2563eb;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.12);
+  transform: translateY(-8px);
+}
+
+.navCard:hover::before {
+  transform: scaleX(1);
+}
+
+.navCardIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.navCard:hover .navCardIcon {
+  transform: scale(1.1) translateY(-5px);
+}
+
+.navCardTitle {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+.navCard:hover .navCardTitle {
+  color: #2563eb;
+}
+
+.navCardDescription {
+  font-size: 0.975rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+
+.navCardButton {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.025rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.navCardButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.navCardButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .navigationGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .navCard {
+    padding: 2rem;
+    min-height: 280px;
+  }
+
+  .navCardIcon {
+    font-size: 3rem;
+  }
+
+  .navCardTitle {
+    font-size: 1.4rem;
+  }
+}
